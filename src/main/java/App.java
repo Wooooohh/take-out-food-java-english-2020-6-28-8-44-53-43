@@ -25,13 +25,13 @@ public class App {
         // 活动2减免后的价格
         double pro2_price = 0;
         //活动策略信息
-        SalesPromotion pro1,pro2;
+        SalesPromotion pro1 = null,pro2 = null;
         //所有菜品信息
-        List<Item> Items;
+        List<Item> Items = null;
         //活动信息
-        List<SalesPromotion> SalesPromotions;
+        List<SalesPromotion> SalesPromotions = null;
         //菜品map
-        HashMap<String, Item> ItemsMap;
+        HashMap<String, Item> ItemsMap = null;
         Items = itemRepository.findAll();
         SalesPromotions = salesPromotionRepository.findAll();
         ItemsMap = new HashMap<>();
