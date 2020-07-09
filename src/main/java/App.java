@@ -34,7 +34,7 @@ public class App {
         HashMap<String, Item> ItemsMap;
         Items = itemRepository.findAll();
         SalesPromotions = salesPromotionRepository.findAll();
-        IteMap = new HashMap<>();
+        ItemsMap = new HashMap<>();
         for (Item item : Items) {
             ItemsMap.put(item.getId(), item);
         }
@@ -75,8 +75,8 @@ public class App {
                 ret.append(String.format("Half price for certain dishes (%s)，saving %.0f yuan\n",dishes,pro2_discount));
                 total -= pro2_discount;
             }
+            ret.append("-----------------------------------\n");
         }
-        ret.append("-----------------------------------\n");
         ret.append(String.format("Total：%.0f yuan\n",total));
         ret.append("===================================");
         return ret.toString();
